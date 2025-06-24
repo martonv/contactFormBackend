@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+ailfrom flask import Flask, render_template, request
 from flask_cors import CORS
 import smtplib
 import ssl
@@ -12,9 +12,9 @@ def index():
 
 @app.route('/send', methods=['POST'])
 def sendEmail():
-    sender_email = "marton@vargaventure.com"
-    receiver_email = "marton@vargaventure.com"
-    password = "hwey ydar sipi cpmf"  # Use an App Password
+    sender_email = "marton@email"
+    receiver_email = "marton@email"
+    password = ""  # Use an App Password from Google
 
     data = request.get_json()
     name = data.get('name')
